@@ -19,11 +19,11 @@ Die Test Umgebung ist von [https://github.com/OpenTelekomCloud/terraform-otc.git
 Wir nutzen aber die terraform Version  v0.12.13. Es wird in diesem Beispiel der provider "openstack" benutzet.
 Bei Terraform gibt es bereits ein Provider opentelekomcloud.
 
-Nach wechsel in den Ordnr "minimal" und  anpassen der Berechtigungsdaten in "parameter.tvars"
+Nach wechsel in den Ordner "minimal" und  anpassen der Berechtigungsdaten in "parameter.tvars"
 
     cd minimal
 
-werdem die Kommandos zum deployen ausgeführt.
+werden die Kommandos zum deployen ausgeführt.
 
 
     terraform init
