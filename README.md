@@ -2,9 +2,7 @@
 
 Mit dem 250 EUR Gutschein der Telekom soll versucht werden eine virtuellen Server ( **Elastic Cloud Server** imTelekom Sprech ) per Kommandozeile aufzusetzen und wieder zu löschen.
 
-Um schnell Server bzw. Infrastukturen aufzusetzen eignet sich das Tool terraform von Hashicorp.
-
-
+Um schnell Server bzw. Infrastukturen aufzusetzen eignet sich das Tool terraform von [Hashicorp](https://www.terraform.io/docs/providers/index.html). 
 
 ### Voraussetzung
 
@@ -12,14 +10,14 @@ Um schnell Server bzw. Infrastukturen aufzusetzen eignet sich das Tool terraform
 
 2. Wir arbeiten in einer Linux-Shell. 
 
-3. terraform ist installiert
+3. [terraform](https://www.terraform.io/downloads.html) ist installiert.  
 
 Die Test Umgebung ist von [https://github.com/OpenTelekomCloud/terraform-otc.git] abgekupfert.
 
-Wir nutzen aber die terraform Version  v0.12.13. Es wird in diesem Beispiel der provider "openstack" benutzet.
-Bei Terraform gibt es bereits ein Provider opentelekomcloud.
+Aktuell  Version  v0.12.13. Es wird in diesem Beispiel der provider "openstack" benutzt.
+!! Bei Terraform gibt es bereits ein Provider **opentelekomcloud**. https://www.terraform.io/docs/providers/index.html. !!
 
-Nach wechsel in den Ordner "minimal" und  anpassen der Berechtigungsdaten in "parameter.tvars"
+Nach wechsel in den Ordner "minimal" und  anpassen der Berechtigungsdaten in `parameter.tvars`
 
     cd minimal
 
@@ -32,9 +30,9 @@ werden die Kommandos zum deployen ausgeführt.
     terraform apply minimal.plan
     terraform show
 
-Ab hier kann mit z.B. ansible der Server komnfiguriert werden
+Ab hier kann mit z.B. "ansible" der Server konfiguriert werden
 
-Nach Ende der Arbeiten werden die Erzeugten Opjekte wieder gelöscht.
+Nach Ende der Arbeiten werden die erzeugten Objekte wieder gelöscht.
 
 
     terraform destroy  -var-file=parameter.tvars 
